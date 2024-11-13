@@ -4,22 +4,18 @@ from bs4 import BeautifulSoup
 
 
 def search_books(query, limit=None):
-    # URL с запросом
     url = f"https://flibusta.site/booksearch?ask={query}&chb=on"
 
-    # Выполняем запрос
     response = requests.get(url)
 
-    # Парсим HTML с BeautifulSoup
     soup = BeautifulSoup(response.text, 'html.parser')
 
-    # Извлекаем только книги, игнорируя другие элементы
     books = []
     for li in soup.find_all('li'):
         a_tag = li.find('a')
-        if a_tag and '/b/' in a_tag['href']:  # Проверяем, что это ссылка на книгу
+        if a_tag and '/b/' in a_tag['href']:
             book_title = a_tag.text
-            book_url = "https://flibusta.site" + a_tag['href']  # Формируем полную ссылку на книгу
+            book_url = "https://flibusta.site" + a_tag['href'] 
             author = li.find_all('a')[-1].text
             books.append({
                 "title": book_title,
