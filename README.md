@@ -11,14 +11,6 @@ A simple API built with FastAPI to search for books from the Flibusta library. T
   - Links to book pages
   - Download links in FB2, EPUB, and MOBI formats
 
-## Technologies Used
-
-- Python
-- FastAPI
-- Pydantic
-- BeautifulSoup
-- Requests
-
 ## Installation
 
 1. Clone the repository:
