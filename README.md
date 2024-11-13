@@ -2,6 +2,7 @@
 
 A simple API built with FastAPI to search for books from the Flibusta library. This API allows users to query for books based on a search term and retrieve relevant book information including titles, authors, and download links in various formats.
 
+ ![structure](https://i.ibb.co/FbM825P/image.png) 
 ## Features
 
 - Search for books by title or author.
