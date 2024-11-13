@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List
 
-from main import search_books
+from search import search_books
 
 app = FastAPI()
 
